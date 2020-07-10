@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Nav: React.FC = () => {
   return (
     <div className="mx-3 mt-5 mb-8 flex justify-between items-center">
-      <div className="text-2xl md:text-5xl font-extrabold ">Ben's Blog</div>
+      <div className="text-2xl md:text-5xl font-extrabold ">{process.env.MY_NAME}'s Blog</div>
       <div>
         <div>
           <Link href="/about">

@@ -1,6 +1,9 @@
 {
-  "name": "with-typescript",
-  "version": "1.0.0",
+  "name": "no-blog",
+  "version": "0.0.5",
+  "author": "bnpne",
+  "repository": "https://github.com/bnpne/noblog",
+  "description": "Create a blog with Notion as a CMS",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -24,5 +27,5 @@
     "tailwindcss": "^1.4.6",
     "typescript": "3.7.3"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
