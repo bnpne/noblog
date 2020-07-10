@@ -1,23 +1,28 @@
 import { NotionRenderer, BlockMapType } from 'react-notion'
-import { fetcher, Post } from './'
+import { Post } from '../../types/index'
+import Layout from '../../components/layout'
+
+const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
 const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   post,
   blocks,
 }) => (
-  <div className="content">
-    <h1>{post.title}</h1>
-    <NotionRenderer blockMap={blocks} />
-  </div>
+  <Layout title={post.title}>
+    <div className="m-auto max-w-2xl">
+      <h1 className='text-5xl font-extrabold'>{post.title}</h1>
+      <NotionRenderer blockMap={blocks} />
+    </div>
+  </Layout>
 )
 
+export default BlogPost
+
 export async function getStaticProps({ params: { slug } }: any) {
-  // Get all posts again
   const posts = await fetcher(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
   )
 
-  // Find the current blogpost by slug
   const post = posts.find((t: any) => t.slug === slug)
 
   const blocks = await fetch(
@@ -38,9 +43,7 @@ export async function getStaticPaths() {
   )
 
   return {
-    paths: table.map((row: any) => `/${row.slug}`),
+    paths: table.map((row: any) => `/posts/${row.slug}`),
     fallback: true,
   }
 }
-
-export default BlogPost

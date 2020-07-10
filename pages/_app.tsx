@@ -1,6 +1,5 @@
-
 import { AppProps } from 'next/app'
-import '../styles.css'
+import '../styles/style.css'
 import 'react-notion/src/styles.css'
 import 'prismjs/themes/prism-tomorrow.css'
 
