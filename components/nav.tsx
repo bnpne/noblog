@@ -1,9 +1,19 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Nav: React.FC = () => {
   return (
-    <div>
-      
+    <div className="mx-3 mt-5 mb-8 flex justify-between items-center">
+      <div className="text-2xl md:text-5xl font-extrabold ">Ben's Blog</div>
+      <div>
+        <div>
+          <Link href="/about">
+            <a className="text-xl hover:bg-gray-200 p-3 rounded-md font-semibold hover:text-blue-500">
+              About Me
+            </a>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

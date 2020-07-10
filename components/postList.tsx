@@ -25,14 +25,14 @@ const PostList: React.FC = (props: any) => {
           return (
             <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
               <div
-                className="hover:bg-gray-200 cursor-pointer p-3 py-4 px-5  m-2 rounded-md"
+                className="hover:bg-gray-200 hover:text-blue-500 cursor-pointer p-3 py-4 px-5 mb-2 rounded-md"
                 key={post.id}
               >
-                <div className='leading-snug'>
+                <div className="leading-snug ">
                   <div className="text-2xl font-bold">{post.title}</div>
-                  <div className="text-base font-semibold">By: {post.author[0].fullName}</div>
+                  {/* <div className="text-base font-semibold" key={post.id}>By: {post.author[0].fullName}</div> */}
                 </div>
-                <div className="mt-2 text-base text-gray-400">{post.date}</div>
+                <div className=" text-base text-gray-400">{post.date}</div>
               </div>
             </Link>
           )
