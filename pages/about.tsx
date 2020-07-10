@@ -1,5 +1,5 @@
 import React from 'react'
-import { NotionRenderer, BlockMapType } from 'react-notion'
+import { NotionRenderer } from 'react-notion'
 import useSWR from 'swr'
 import Link from 'next/link'
 import Layout from '../components/layout'
