@@ -1,6 +1,8 @@
 # No-Blog
 ### Create a blog with Notion as a CMS  
   
+#### ⚠️ Broken, working on fixing it. Use at your own risk ⚠️
+#### Made by [Ben Paine](https://twitter.com/bnpneio)
   
 ## Get Started
 
