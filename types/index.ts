@@ -5,4 +5,7 @@ export type Post = {
   date: string
   published: boolean
   author: string
+  page_icon: string
+  format: string
+  fullName: string
 }

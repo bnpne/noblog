@@ -6,13 +6,13 @@
   
 ## Get Started
 
-1. Duplicate [this Notion template](https://www.notion.so/Blog-ddb76f2840304cbea72d1195535b0bb7)
-2. Copy the page ID for the **About** page and paste it into `NOTION_ABOUT_ID` in the `.env` file
-3. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
+1. Duplicate [this Notion template](https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79)
+2. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
+  - ex: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
    
-![video](./public/videos/get%20id.gif)
+![video](./public/videos/id.gif)
 
-4. Put your first name into `MY_NAME` in the `.env` file
+1. Put your first name into `MY_NAME` in the `.env` file
 
 ## Create Blog Post
 

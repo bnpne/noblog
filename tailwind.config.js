@@ -1,4 +1,4 @@
-module.exports = {
+  module.exports = {
   purge: [],
   target: 'relaxed',
   prefix: '',
@@ -17,7 +17,7 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
-      lmode: '#383838',
+      lmode: '#37352F',
 
       gray: {
         100: '#f7fafc',
@@ -233,6 +233,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Inter',
         'system-ui',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -259,6 +260,7 @@ module.exports = {
       '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
+      '40': '2.5rem',
       '5xl': '3rem',
       '6xl': '4rem',
     },
