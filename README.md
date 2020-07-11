@@ -1,7 +1,11 @@
 # No-Blog
 ### Create a blog with Notion as a CMS  
-  
-#### ⚠️ Still a little unstable. Use at your own risk ⚠️
+
+## ⚠️ **No-Blog is still in production**
+1. No nav bar, feel free to implement or place a pull request to add a nav bar  
+2. Still a little unstable. Use at your own risk 
+3. Deploy to Vercel is broken, working on it currently 
+
 #### Made by [Ben Paine](https://twitter.com/bnpneio)
   
 ## Get Started
@@ -20,12 +24,6 @@
 4. Done, the slug and post will appear on the page
 
 ![post video](./public/videos/blog2.gif)
-
-## Deploy to Vercel
-
-#### ⚠️ Use at your own risk ⚠️
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/bnpne/noblog)
-
 ## Run Locally
 
 1. Fork the Repository, clone it, and run `npm install`
