@@ -1,8 +1,8 @@
 import React from 'react'
 import { NotionRenderer } from 'react-notion'
 import useSWR from 'swr'
-import Link from 'next/link'
 import Layout from '../components/layout'
+import AboutNav from '../components/aboutNav'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
@@ -24,17 +24,8 @@ const About = (props: any) => {
   return (
     <div>
       <Layout title='About'>
-        <div className="mx-3 mt-5  ">
-          <div className="flex justify-between items-center mb-8">
-            <div className="text-2xl md:text-5xl font-extrabold ">About</div>
-            <div>
-              <Link href="/">
-                <a className="text-xl hover:bg-gray-200 p-3 rounded-md font-semibold hover:text-blue-500">
-                  Home
-                </a>
-              </Link>
-            </div>
-          </div>
+        <div className="mx-3 mt-5">
+          <AboutNav />
           <NotionRenderer blockMap={data} />
         </div>
 

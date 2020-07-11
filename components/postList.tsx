@@ -36,15 +36,13 @@ const PostList: React.FC = (props: any) => {
               </div>
             </Link>
           )
-        } 
+        }
       })}
-      
     </div>
   )
 }
 
 export default PostList
-
 
 export async function getStaticProps() {
   const posts = await fetcher(

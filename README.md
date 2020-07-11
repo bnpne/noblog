@@ -1,7 +1,7 @@
 # No-Blog
 ### Create a blog with Notion as a CMS  
   
-#### ⚠️ Broken, working on fixing it. Use at your own risk ⚠️
+#### ⚠️ Still a little unstable. Use at your own risk ⚠️
 #### Made by [Ben Paine](https://twitter.com/bnpneio)
   
 ## Get Started
@@ -21,8 +21,11 @@
 3. When you're ready, check published
 4. Done, the slug and post will appear on the page
 
+![post video](./public/videos/blog2.gif)
+
 ## Deploy to Vercel
 
+#### ⚠️ Use at your own risk ⚠️
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/bnpne/noblog)
 
 ## Run Locally
@@ -31,4 +34,5 @@
 2. Fill in the `.env` file
 3. Run `npm run dev`
 
-
+## License
+[MIT](./LICENSE)
