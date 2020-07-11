@@ -18,7 +18,7 @@
  
 ## Create Blog Post
 
-1. Simply go to the Post page, and click 
+1. Simply go to the Post page, and click **New**
 2. Fill in the Page name, slug, Date, and Author
 3. When you're ready, check published
 4. Done, the slug and post will appear on the page
