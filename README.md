@@ -10,7 +10,7 @@
   
 ## Get Started
 
-1. Duplicate [this Notion template](https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79)
+1. Duplicate [this Notion template](https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79) and make it public
 2. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
     - example: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
    
@@ -22,8 +22,6 @@
 2. Fill in the Page name, slug, Date, and Author
 3. When you're ready, check published
 4. Done, the slug and post will appear on the page
-
-![post video](./public/videos/blog2.gif)
 ## Run Locally
 
 1. Fork the Repository, clone it, and run `npm install`
