@@ -2,11 +2,29 @@ import { NotionRenderer, BlockMapType } from 'react-notion'
 import { Post } from '../../types/index'
 import Layout from '../../components/layout'
 import 'prismjs/components/prism-bash'
-
-//https://www.notion.so/Hello-World-d1868a84dd4844a4a45dafa08cde09b7
-
+import Link from 'next/link'
+import PostContainer from '../../components/postContainer'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
+
+export async function getStaticProps({ params: { slug } }: any) {
+  const posts = await fetcher(
+    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
+  )
+
+  const post = posts.find((t: any) => t.slug === slug)
+
+  const blocks = await fetcher(
+    `https://notion-api.splitbee.io/v1/page/${post!.id}`
+  )
+
+  return {
+    props: {
+      blocks,
+      post,
+    },
+  }
+}
 
 const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   post,
@@ -15,8 +33,13 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   return (
     <div>
       <Layout title={post.title}>
-        <div className="mt-12">
-          <div>
+        <PostContainer>
+          <div className='mt-8'>
+            <Link href='/'>
+              <a className='text-gray-500 hover:text-lmode'>⟵ Home</a>
+            </Link>
+          </div>
+          <div className="mt-8">
             <div className="text-5xl font-bold leading-normal">
               {post.title}
             </div>
@@ -26,31 +49,10 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
             <div className="text-lg text-gray-500">{post.date}</div>
           </div>
           <NotionRenderer blockMap={blocks} />
-        </div>
+        </PostContainer>
       </Layout>
     </div>
   )
-}
-
-export default BlogPost
-
-export async function getStaticProps({ params: { slug } }: any) {
-  const posts = await fetcher(
-    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
-  )
-
-  const post = posts.find((t: any) => t.slug === slug)
-
-  const blocks = await fetch(
-    `https://notion-api.splitbee.io/v1/page/${post!.id}`
-  ).then((res) => res.json())
-
-  return {
-    props: {
-      blocks,
-      post,
-    },
-  }
 }
 
 export async function getStaticPaths() {
@@ -63,3 +65,6 @@ export async function getStaticPaths() {
     fallback: true,
   }
 }
+
+export default BlogPost
+

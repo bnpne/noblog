@@ -1,6 +1,6 @@
 {
   "name": "no-blog",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "author": "bnpne",
   "repository": "https://github.com/bnpne/noblog",
   "description": "Create a blog with Notion as a CMS",

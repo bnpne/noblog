@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
+import Nav from './nav'
 
 type Props = {
   children?: ReactNode,
@@ -14,7 +15,8 @@ const Layout = ({ children, title='default'}: Props) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="w-screen max-w-4xl mx-auto px-24 mb-24">
+      <div>
+        <Nav />
         {children}
         <div className=" mt-32 h-10 text-center text-sm text-gray-500">
           Made with Notion ❤ 
