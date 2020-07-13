@@ -37,15 +37,4 @@ const About: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   ) 
 }
 
-export async function getStaticPaths() {
-  const table = await fetcher(
-    `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
-  )
-
-  return {
-    paths: table.map(() => `/about`),
-    fallback: true,
-  }
-}
-
 export default About
