@@ -6,9 +6,22 @@
   
 ## Get Started
 
+## Run Locally
+
+1. Fork the Repository, clone it, and run `npm install`
+2. Fill in the `.env` file
+3. Run `npm run dev`
+4. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
+   - Example: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
+
+## Deploy to Vercel
+
 1. Duplicate [this Notion template](https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79) and make it public
-2. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
-    - example: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
+   
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/bnpne/noblog)
+
+3. Copy the page ID for the **Post** page and paste it into `NOTION_BLOG_ID` in the `.env` file  
+   - Example: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
     
 ## Create Blog Post
 
@@ -21,11 +34,5 @@
 
 This page is your About page and will not appear in your blog, but rather will appear under the `About` Link. **DO NOT DELETE THIS POST**, you may break the site. If you do not want an about page, go into `/components/nav.tsx` and remove the respective link and you should be safe to delete the `About` post
    
-## Run Locally
-
-1. Fork the Repository, clone it, and run `npm install`
-2. Fill in the `.env` file
-3. Run `npm run dev`
-
 ## License
 [MIT](./LICENSE)
