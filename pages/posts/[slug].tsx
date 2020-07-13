@@ -1,5 +1,4 @@
 import { NotionRenderer, BlockMapType } from 'react-notion'
-import { Post } from '../../types/index'
 import Layout from '../../components/layout'
 import 'prismjs/components/prism-bash'
 import Link from 'next/link'
@@ -26,7 +25,7 @@ export async function getStaticProps({ params: { slug } }: any) {
   }
 }
 
-const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
+const BlogPost: React.FC<{ post: any; blocks: BlockMapType }> = ({
   post,
   blocks,
 }) => {
@@ -36,7 +35,7 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
         <PostContainer>
           <div className='mt-8'>
             <Link href='/'>
-              <a className='text-gray-500 hover:text-lmode'>⟵ Home</a>
+              <a className='text-gray-500 hover:text-lmode'>⟵ Back</a>
             </Link>
           </div>
           <div className="mt-8">

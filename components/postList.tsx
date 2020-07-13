@@ -20,27 +20,30 @@ const PostList: React.FC = (props: any) => {
   // console.log(data[0].author[0].profilePhoto)
 
   return (
-    <div className="w-screen max-w-4xl mx-auto px-8 lg:px-6 sm:px-12 md:px-24 mb-24 lg:max-w-screen-xl lg:grid lg:grid-col lg:grid-cols-3 ">
+    <div className="w-screen max-w-4xl mx-auto px-8 mt-16 sm:px-12 md:px-12 mb-24 md:max-w-screen-lg md:grid md:grid-cols-2">
       {data.map((post: any) => {
         if (post.published && post.title !== 'About') {
           return (
             <Link href="/posts/[slug]" as={`/posts/${post.slug}`}>
               <div
-                className="cursor-pointer my-4 mx-auto lg:mx-4 hover:bg-gray-200  max-w-md lg:max-w-sm border border-gray-400 rounded-md p-6"
+                className="cursor-pointer my-4 hover:bg-gray-200 border border-gray-400 rounded-md max-w-md lg:max-w-md mx-auto md:mx-5 px-6 py-5"
                 key={post.id}
               >
                 <div className="text-2xl font-bold">{post.title}</div>
-                <div className="flex justify-start items-center mt-4">
-                  <img
-                    className="rounded-full w-12 mr-6"
-                    src={post.author[0].profilePhoto}
-                  />
-                  <div className="block">
-                    <div className="text-lg font-bold mr-12 text-base">
-                      {post.author[0].fullName}
+                <div className="flex items-end justify-between mt-4">
+                  <div className="flex justify-start">
+                    <img
+                      className="rounded-full w-12 mr-6"
+                      src={post.author[0].profilePhoto}
+                    />
+                    <div className="block">
+                      <div className="font-bold mr-12 text-base">
+                        {post.author[0].fullName}
+                      </div>
+                      <div className="text-base text-gray-400">{post.date}</div>
                     </div>
-                    <div className="text-base text-gray-400">{post.date}</div>
                   </div>
+                  <div className="text-xl font-bold">↘︎</div>
                 </div>
               </div>
             </Link>

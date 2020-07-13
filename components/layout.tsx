@@ -9,7 +9,7 @@ type Props = {
 
 const Layout = ({ children, title='default'}: Props) => {
   return (
-    <div className="flex flex-col min-h-screen text-lmode">
+    <div className="flex flex-col min-h-screen text-lmode dark:bg-black">
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />

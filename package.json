@@ -1,7 +1,7 @@
 {
   "name": "no-blog",
   "version": "0.1.0",
-  "author": "bnpne",
+  "author": "Ben Paine",
   "repository": "https://github.com/bnpne/noblog",
   "description": "Create a blog with Notion as a CMS",
   "scripts": {
@@ -11,11 +11,8 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@fullhuman/postcss-purgecss": "^2.3.0",
     "dotenv": "^8.2.0",
-    "emotion-theming": "^10.0.27",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

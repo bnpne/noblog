@@ -26,7 +26,6 @@ export async function getStaticProps() {
 }
 
 const About: React.FC<{ post: Post; blocks: BlockMapType }> = ({
-  post,
   blocks
 }) => {
   return (
@@ -44,7 +43,7 @@ export async function getStaticPaths() {
   )
 
   return {
-    paths: table.map((row: any) => `/about`),
+    paths: table.map(() => `/about`),
     fallback: true,
   }
 }
