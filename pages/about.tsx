@@ -3,10 +3,11 @@ import Layout from '../components/layout'
 import { NotionRenderer, BlockMapType } from 'react-notion'
 import { Post } from '../types/index'
 import PostContainer from '../components/postContainer'
+import { GetStaticProps } from 'next'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await fetcher(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
   )

@@ -4,10 +4,11 @@ import 'prismjs/components/prism-bash'
 import Link from 'next/link'
 import PostContainer from '../../components/postContainer'
 import { Post } from '../../types'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
-export async function getStaticProps({ params: { slug } }: any) {
+export const getStaticProps: GetStaticProps = async ({ params: { slug } }: any) => {
   const posts = await fetcher(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
   )
@@ -32,7 +33,7 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
 }) => {
   return (
     <div>
-      <Layout title={post.title}>
+      <Layout title={post?.title}>
         <PostContainer>
           <div className='mt-8'>
             <Link href='/'>
@@ -55,14 +56,14 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   )
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const table = await fetcher(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
   )
 
   return {
     paths: table.map((row: any) => `/posts/${row.slug}`),
-    fallback: true,
+    fallback: false,
   }
 }
 

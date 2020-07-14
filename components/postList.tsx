@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import useSWR from 'swr'
+import { GetStaticProps } from 'next'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
@@ -60,7 +61,7 @@ const PostList: React.FC = (props: any) => {
 
 export default PostList
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = await fetcher(
     `https://notion-api.splitbee.io/v1/table/${process.env.NOTION_BLOG_ID}`
   )
