@@ -8,4 +8,5 @@ export type Post = {
   page_icon: string
   format: string
   fullName?: string
+  preview: string
 }

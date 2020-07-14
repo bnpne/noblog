@@ -33,11 +33,11 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
 }) => {
   return (
     <div>
-      <Layout title={post?.title}>
+      <Layout title={post.title}>
         <PostContainer>
-          <div className='mt-8'>
-            <Link href='/'>
-              <a className='text-gray-500 hover:text-lmode'>⟵ Back</a>
+          <div className="mt-8">
+            <Link href="/">
+              <a className="text-gray-500 hover:text-lmode">⟵ Back</a>
             </Link>
           </div>
           <div className="mt-8">
@@ -49,6 +49,11 @@ const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
             </div>
             <div className="text-lg text-gray-500">{post.date}</div>
           </div>
+          <div className="mt-4">
+            <hr />
+          </div>
+          <div className="italic mt-10 mb-6">{post.preview}</div>
+
           <NotionRenderer blockMap={blocks} />
         </PostContainer>
       </Layout>
