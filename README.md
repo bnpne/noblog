@@ -20,7 +20,7 @@
 2. Copy the page ID for the **Post** page and create a new Environment Variable when prompted called `NOTION_BLOG_ID` and paste the id 
    - Example: if the url is `https://www.notion.so/b4fdfbc46b534ce58883dd887cae3978?v=50fd8c5289ca4ff0abf6f96209a5bb79` the id would be `b4fdfbc46b534ce58883dd887cae3978`
    
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/bnpne/noblog&env=NOTION_BLOG_ID&envDescription=Required+env+values+for+deploying&envLink=https://github.com/bnpne/noblog#deploy-to-vercel)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/bnpne/noblog/tree/master&env=NOTION_BLOG_ID&envDescription=Required+env+values+for+deploying&envLink=https://github.com/bnpne/noblog#deploy-to-vercel)
 
 ## Create Blog Post
 
