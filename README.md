@@ -1,7 +1,8 @@
 # No-Blog
 ### Create a blog with Notion as a CMS  
 
-## ⚠️ **No-Blog is still in production**
+Check out the [Demo](https://noblog-demo.vercel.app/)  
+
 #### Made by [Ben Paine](https://twitter.com/bnpneio)
   
 ## Get Started
