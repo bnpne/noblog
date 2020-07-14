@@ -38,7 +38,7 @@ const PostList: React.FC = (props: any) => {
                 <div className="flex items-end justify-between mt-4">
                   <div className="flex justify-start">
                     <img
-                      className="rounded-full w-12 mr-6"
+                      className="rounded-full w-12 h-12 mr-6"
                       src={post.author[0].profilePhoto}
                     />
                     <div className="block">
