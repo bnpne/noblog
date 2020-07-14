@@ -3,6 +3,7 @@ import Layout from '../../components/layout'
 import 'prismjs/components/prism-bash'
 import Link from 'next/link'
 import PostContainer from '../../components/postContainer'
+import { Post } from '../../types'
 
 const fetcher = async (url: any) => fetch(url).then((res) => res.json())
 
@@ -25,7 +26,7 @@ export async function getStaticProps({ params: { slug } }: any) {
   }
 }
 
-const BlogPost: React.FC<{ post: any; blocks: BlockMapType }> = ({
+const BlogPost: React.FC<{ post: Post; blocks: BlockMapType }> = ({
   post,
   blocks,
 }) => {

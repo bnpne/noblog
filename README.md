@@ -22,14 +22,16 @@
    
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/bnpne/noblog)
 
-
-    
 ## Create Blog Post
 
 1. Simply go to the Post page, and click **New**
-2. Fill in the Page name, slug, Date, and Author
+2. Fill in the Page name, Slug, Date, and Author
 3. When you're ready, check published
 4. Done, the slug and post will appear on the page
+
+## ⚠️ CAVEAT
+
+The slug has to be either one word or seperated by a hyphen. For example, a slug for *Hello World* needs to be either *"helloworld"* or *"hello-world"*.
 
 ## About Page
 

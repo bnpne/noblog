@@ -4,8 +4,8 @@ export type Post = {
   title: string
   date: string
   published: boolean
-  author: string
+  author?: {}
   page_icon: string
   format: string
-  fullName: string
+  fullName?: string
 }
