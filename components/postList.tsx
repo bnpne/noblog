@@ -14,6 +14,10 @@ const PostList: React.FC = (props: any) => {
     { initialData: props.posts }
   )
 
+  if(props == null) {
+    return <div>null</div>
+  }
+
   if (error) return <div className="text-lg font-bold">Failed to Load</div>
   if (!data) return <div className="text-lg font-bold">Loading ...</div>
 
